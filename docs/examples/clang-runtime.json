@@ -1,0 +1,19 @@
+{
+  "id": "clang-android",
+  "name": "Clang",
+  "version": "17",
+  "abi": "arm64-v8a",
+  "languages": ["c", "cpp"],
+  "binDirs": ["bin"],
+  "env": { "LD_LIBRARY_PATH": "${PKG}/lib" },
+  "run": {
+    "c": [
+      { "cmd": ["${PKG}/bin/clang", "${FILE}", "-o", "${OUT}"] },
+      { "cmd": ["${OUT}"] }
+    ],
+    "cpp": [
+      { "cmd": ["${PKG}/bin/clang++", "${FILE}", "-o", "${OUT}"] },
+      { "cmd": ["${OUT}"] }
+    ]
+  }
+}

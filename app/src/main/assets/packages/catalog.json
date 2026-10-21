@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "comment": "Catalog of language packages this app can install. Sizes are rough ESTIMATES. downloadUrl is intentionally empty: this project does not host runtime archives. Set downloadUrl (https) and sha256 for an archive you trust, or install a local .zip.",
+  "packages": [
+    {
+      "id": "python-android",
+      "name": "Python 3",
+      "languages": ["python"],
+      "approxDownloadMb": "25-50",
+      "approxInstallMb": "60-120",
+      "abi": ["arm64-v8a"],
+      "minAndroid": 8,
+      "downloadUrl": "",
+      "sha256": "",
+      "notes": "Must be built for Android (bionic libc) and be relocatable. Termux packages are built for the com.termux prefix and will NOT work unmodified.",
+      "guide": [
+        "Build or obtain a CPython build for android arm64 that runs from any install directory.",
+        "Add runtime.json at the archive root (see docs/RUNTIME_PACKAGES.md, example in docs/examples/python-runtime.json).",
+        "Zip it, then tap 'Install file' or 'Import .zip archive'.",
+        "Open a .py file and press Run."
+      ]
+    },
+    {
+      "id": "php-android",
+      "name": "PHP CLI",
+      "languages": ["php"],
+      "approxDownloadMb": "10-25",
+      "approxInstallMb": "20-50",
+      "abi": ["arm64-v8a"],
+      "minAndroid": 8,
+      "downloadUrl": "",
+      "sha256": "",
+      "notes": "Needs a statically linked or relocatable php-cli built for Android. Runs scripts via the CLI; no web server is included.",
+      "guide": [
+        "Obtain a php-cli binary built for android arm64.",
+        "Place it in bin/ and write runtime.json (docs/RUNTIME_PACKAGES.md).",
+        "Zip and install, then Run a .php file."
+      ]
+    },
+    {
+      "id": "openjdk-android",
+      "name": "OpenJDK (javac + java)",
+      "languages": ["java"],
+      "approxDownloadMb": "60-120",
+      "approxInstallMb": "150-300",
+      "abi": ["arm64-v8a"],
+      "minAndroid": 8,
+      "downloadUrl": "",
+      "sha256": "",
+      "notes": "Needs a JDK built for Android/bionic. Compiles with javac then runs the class named after the file (no package support in the default run steps).",
+      "guide": [
+        "Obtain an OpenJDK build for android arm64.",
+        "Write runtime.json with javac and java steps (docs/examples/java-runtime.json).",
+        "Zip and install, then Run Main.java."
+      ]
+    },
+    {
+      "id": "clang-android",
+      "name": "Clang (C and C++)",
+      "languages": ["c", "cpp"],
+      "approxDownloadMb": "100-250",
+      "approxInstallMb": "300-700",
+      "abi": ["arm64-v8a"],
+      "minAndroid": 8,
+      "downloadUrl": "",
+      "sha256": "",
+      "notes": "Needs an on-device clang toolchain plus sysroot/headers. This is the largest package.",
+      "guide": [
+        "Obtain a clang toolchain that runs on android arm64 with a sysroot.",
+        "Write runtime.json with compile and run steps (docs/examples/clang-runtime.json).",
+        "Zip and install, then Run a .c or .cpp file."
+      ]
+    }
+  ]
+}

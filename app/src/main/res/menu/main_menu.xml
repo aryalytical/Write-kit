@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_run" android:title="Run" android:icon="@drawable/ic_play" app:showAsAction="always" />
+    <item android:id="@+id/action_undo" android:title="Undo" android:icon="@drawable/ic_undo" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_redo" android:title="Redo" android:icon="@drawable/ic_redo" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_find" android:title="Find / Replace" android:icon="@drawable/ic_search" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_save" android:title="Save" android:icon="@drawable/ic_save" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_save_all" android:title="Save all" app:showAsAction="never" />
+    <item android:id="@+id/action_format" android:title="Format document" app:showAsAction="never" />
+    <item android:id="@+id/action_comment" android:title="Toggle comment" app:showAsAction="never" />
+    <item android:id="@+id/action_goto" android:title="Go to line…" app:showAsAction="never" />
+    <item android:id="@+id/action_preview_web" android:title="Preview project in browser" app:showAsAction="never" />
+    <item android:id="@+id/action_preview_react" android:title="Preview React project" app:showAsAction="never" />
+    <item android:id="@+id/action_output" android:title="Show / hide output panel" app:showAsAction="never" />
+    <item android:id="@+id/action_projects" android:title="Projects…" app:showAsAction="never" />
+    <item android:id="@+id/action_packages" android:title="Language packages" app:showAsAction="never" />
+    <item android:id="@+id/action_settings" android:title="Settings" app:showAsAction="never" />
+    <item android:id="@+id/action_about" android:title="Feature status" app:showAsAction="never" />
+</menu>

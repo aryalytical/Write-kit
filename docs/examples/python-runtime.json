@@ -1,0 +1,12 @@
+{
+  "id": "python-android",
+  "name": "Python 3",
+  "version": "3.12.0",
+  "abi": "arm64-v8a",
+  "languages": ["python"],
+  "binDirs": ["bin"],
+  "env": { "PYTHONHOME": "${PKG}", "LD_LIBRARY_PATH": "${PKG}/lib" },
+  "run": {
+    "python": [ { "cmd": ["${PKG}/bin/python3", "${FILE}"] } ]
+  }
+}

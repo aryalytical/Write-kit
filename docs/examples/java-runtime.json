@@ -1,0 +1,15 @@
+{
+  "id": "openjdk-android",
+  "name": "OpenJDK",
+  "version": "17",
+  "abi": "arm64-v8a",
+  "languages": ["java"],
+  "binDirs": ["bin"],
+  "env": { "JAVA_HOME": "${PKG}", "LD_LIBRARY_PATH": "${PKG}/lib" },
+  "run": {
+    "java": [
+      { "cmd": ["${PKG}/bin/javac", "-d", "${BUILD}", "${FILE}"] },
+      { "cmd": ["${PKG}/bin/java", "-cp", "${BUILD}", "${NAME}"] }
+    ]
+  }
+}

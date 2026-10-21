@@ -1,0 +1,12 @@
+<resources>
+    <style name="ExplorerAction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+</resources>

@@ -1,0 +1,9 @@
+{
+  "id": "php-android",
+  "name": "PHP CLI",
+  "version": "8.3",
+  "abi": "arm64-v8a",
+  "languages": ["php"],
+  "binDirs": ["bin"],
+  "run": { "php": [ { "cmd": ["${PKG}/bin/php", "${FILE}"] } ] }
+}
